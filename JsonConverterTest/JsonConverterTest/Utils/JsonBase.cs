@@ -22,9 +22,10 @@ namespace JsonConverterTest.Utils
     }
     public class BaseData<T> where T : class
     {
-
         public string metadata { get; set; }
-        public List<T> data { get; set; }
+        
+        ///for your case named this as response
+        public List<T> data { get; set; }//// my json have this form {data:[{},{},{}]}
     }
     public class SomeObjectTHatUwant : BaseData<SomeObjectTHatUwant>
     {
